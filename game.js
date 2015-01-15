@@ -95,7 +95,7 @@ game.onload = function(){
   game.rootScene.addChild(game.instructions);
 
   game.rootScene.addEventListener(enchant.Event.TOUCH_END, game_touched);
-} // end game.onload #initialize game
+}; // end game.onload #initialize game
 
 // listen for tap/click
 function game_touched(){
@@ -141,7 +141,7 @@ game.onenterframe = function(){
     game.distance += game.fly_speed;
 
     // check if we need to spawn obstacle
-    if(game.distance % game.obstacle_frequency == 0){
+    if(game.distance % game.obstacle_frequency === 0){
       
       // #11 spawn obstacle
       spawnObstacle();
@@ -176,7 +176,7 @@ game.onenterframe = function(){
     }
     
   }
-} // end game.onenterframe #game loop
+}; // end game.onenterframe #game loop
 
 function spawnObstacle(){
 
